@@ -5,6 +5,7 @@ set tabstop=4
 set number
 set relativenumber
 set shiftwidth=4
+let mapleader = " "
 
 if has('termguicolors')
 	set termguicolors
@@ -17,3 +18,9 @@ colorscheme sonokai
 
 " Setup of 
 lua require('lsp')
+
+" Fire up lsp manager
+lua require("mason").setup()
+
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>gg :LazyGit<CR>
