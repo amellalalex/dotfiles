@@ -24,3 +24,19 @@ lua require("mason").setup()
 
 " setup mapping to call :LazyGit
 nnoremap <silent> <leader>gg :LazyGit<CR>
+
+" Setup mapping for undo tree 
+nnoremap <silent> <leader>u :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle = 1
+
+" Set path for undo persistent file
+let target_path = expand('~/.undodir')
+
+" create the directory and any parent directories
+" if the location does not exist.
+if !isdirectory(target_path)
+	call mkdir(target_path, "p", 0700)
+endif
+
+let &undodir=target_path
+set undofile
