@@ -28,13 +28,12 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
-<<<<<<< Updated upstream
 	-- Multidimensional undo 
 	use 'mbbill/undotree'
-=======
 	-- Harpoon
 	use 'nvim-lua/plenary.nvim'
-	    use { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" }
->>>>>>> Stashed changes
+	use { "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" }
+	-- Copilot
+	use { "zbirenbaum/copilot.lua" }
 end)
 

@@ -40,3 +40,6 @@ endif
 
 let &undodir=target_path
 set undofile
+
+" Copilot 
+lua require('copilot-config')
